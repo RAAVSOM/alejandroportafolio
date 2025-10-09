@@ -214,7 +214,7 @@ function App() {
                 <div className='relative z-30 inset-0 w-full h-screen transition duration-300 ease-in-out'>
                     <div className='w-full h-full' ref={inicio}>
                         <div className='w-full h-full inset-0 flex flex-col justify-center w-full'>
-                            <div className='h-1/10 mx-10 lg:mx-80'>
+                            <div className='h-1/10 mx-10 2xl:mx-80'>
                                 <GlassSurface
                                     className='w-full! h-full! rounded-t-none!'
                                     displace={2}
@@ -227,8 +227,8 @@ function App() {
                                     opacity={0.8}
                                     mixBlendMode="screen"
                                 >
-                                    <div className='flex justify-center gap-5 w-full mt-5'>
-                                        <button className='cursor-pointer p-4 w-1/20 rounded-full text-[var(--text)] transition duration-300 ease-in-out'
+                                    <div className='flex justify-center gap-5 w-full mt-5 pb-2'>
+                                        <button className='cursor-pointer p-2 2xl:p-4 w-fit rounded-full text-[var(--text)] transition duration-300 ease-in-out text-center'
                                             onClick={ChangeToMode}
                                         >
                                             {isDarkMode ? <i class="fa-solid fa-sun fa-2xl"></i> : <i class="fa-regular fa-moon fa-2xl"></i>}
@@ -245,9 +245,9 @@ function App() {
 
                             <div className='h-8/10 flex flex-col justify-center'>
                                 <div className='flex flex-col justify-center h-5/11'>
-                                    <div className="text-center relative z-10">
+                                    <div className="text-center relative z-10 px-5">
                                         <motion.div
-                                            className="text-5xl font-black"
+                                            className="text-3xl 2xl:text-5xl font-black"
                                             variants={fadeUp}
                                             initial="hidden"
                                             animate="visible"
@@ -256,9 +256,9 @@ function App() {
                                             <div className='z-40'>ALEJANDRO SOCARRAS OLASCUAGA</div>
                                         </motion.div>
                                     </div>
-                                    <div className="text-center relative z-10">
+                                    <div className="text-center relative z-10 px-5">
                                         <motion.div
-                                            className="text-2xl"
+                                            className="text-xl 2xl:text-2xl"
                                             variants={fadeUp}
                                             initial="hidden"
                                             animate="visible"
@@ -268,20 +268,20 @@ function App() {
                                         </motion.div>
                                     </div>
 
-                                    <header className='h-1/10 lg:h-1/10 w-full mt-10'>
-                                        <ul className='flex justify-center h-full items-center gap-2 lg:gap-20'>
-                                            <motion.li className='font-normal text-sm lg:text-xl h-full content-center'
+                                    <header className='h-3/4 sm:h-1/10 w-full mt-5 2xl:mt-10'>
+                                        <ul className='flex flex-col sm:flex-row justify-center h-full items-center gap-3 lg:gap-20'>
+                                            <motion.li className='font-normal text-sm sm:text-xl h-fit sm:h-full content-center'
                                                 onClick={scrollToSobreMi}
                                                 variants={fade}
                                                 initial="hidden"
                                                 animate="visible"
                                                 transition={{ duration: 1, delay: 0.5 }}
                                             >
-                                                <div className='flex items-center justify-center h-full px-1 py-1 lg:px-8 lg:py-6 relative z-10 border-[var(--textLight)] border-5 text-[var(--textDark)] rounded-full bg-[var(--textLight)]'>
+                                                <div className='flex items-center justify-center h-full px-1 py-0 lg:px-8 lg:py-6 relative z-10 border-[var(--textLight)] border-5 text-[var(--textDark)] rounded-full bg-[var(--textLight)]'>
                                                     <a href="#">Sobre Mí</a>
                                                 </div>
                                             </motion.li>
-                                            <motion.li className='font-normal text-sm lg:text-xl h-full content-center'
+                                            <motion.li className='font-normal text-sm sm:text-xl h-fit sm:h-full content-center'
                                                 onClick={scrollToProyecto}
                                                 variants={fade}
                                                 initial="hidden"
@@ -289,7 +289,7 @@ function App() {
                                                 transition={{ duration: 1, delay: 1 }}
                                             >
                                                 <GlassSurface
-                                                    className='px-2 py-4 lg:px-8 lg:py-7 w-full! h-full!'
+                                                    className='px-1 py-0 lg:px-8 lg:py-7 w-full! h-full!'
                                                     displace={0}
                                                     borderRadius={90}
                                                     distortionScale={-150}
@@ -302,7 +302,7 @@ function App() {
                                                     <a href="#">Proyectos</a>
                                                 </GlassSurface>
                                             </motion.li>
-                                            <motion.li className='font-normal text-sm lg:text-xl h-full content-center'
+                                            <motion.li className='font-normal text-sm sm:text-xl h-fit sm:h-full content-center'
                                                 onClick={scrollToPerfil}
                                                 variants={fade}
                                                 initial="hidden"
@@ -310,7 +310,7 @@ function App() {
                                                 transition={{ duration: 1, delay: 1.5 }}
                                             >
                                                 <GlassSurface
-                                                    className='px-2 py-1 lg:px-8 lg:py-7 w-full! h-full!'
+                                                    className='px-1 py-0 lg:px-8 lg:py-7 w-full! h-full!'
                                                     displace={0}
                                                     borderRadius={90}
                                                     distortionScale={-150}
@@ -324,7 +324,7 @@ function App() {
                                                 </GlassSurface>
 
                                             </motion.li>
-                                            <motion.li className='font-normal text-sm lg:text-xl h-full content-center'
+                                            <motion.li className='font-normal text-sm sm:text-xl h-fit sm:h-full content-center'
                                                 onClick={scrollToContacto}
                                                 variants={fade}
                                                 initial="hidden"
@@ -332,7 +332,7 @@ function App() {
                                                 transition={{ duration: 1, delay: 2 }}
                                             >
 
-                                                <div className='flex items-center justify-center h-full px-1 py-1 lg:px-5 lg:py-6 relative z-10 border-[var(--textLight)] border-5 text-[var(--textDark)] rounded-full bg-[var(--textLight)]'>
+                                                <div className='flex items-center justify-center h-full px-1 py-0 lg:px-5 lg:py-6 relative z-10 border-[var(--textLight)] border-5 text-[var(--textDark)] rounded-full bg-[var(--textLight)]'>
                                                     <a href="#">Contacto</a>
                                                 </div>
                                             </motion.li>
@@ -341,9 +341,9 @@ function App() {
                                 </div>
                             </div>
 
-                            <div className='h-1/10 mx-10 lg:mx-80'>
+                            <div className='h-1/10 mx-10 2xl:mx-80'>
                                 <GlassSurface
-                                    className='w-full! h-full! pt-40 pb-20'
+                                    className='w-full! h-full! pt-25 pb-8 sm:pt-30 sm:pb-10 2xl:pt-40 2xl:pb-20'
                                     borderRadius={60}
                                     displace={2}
                                     distortionScale={-150}
@@ -354,7 +354,7 @@ function App() {
                                     opacity={0.8}
                                     mixBlendMode="screen"
                                 >
-                                    <div className='font-black text-5xl lg:text-7xl!'>
+                                    <div className='font-black text-3xl sm:text-5xl 2xl:text-7xl'>
                                         SOBRE MÍ
                                     </div>
                                 </GlassSurface>
@@ -363,20 +363,20 @@ function App() {
                     </div>
 
                     <div className='h-screen'>
-                        <div className='relative flex flex-col justify-start pt-35 h-full w-full z-30' ref={sobreMi}>
+                        <div className='relative flex flex-col justify-start pt-30 sm:pt-15 2xl:pt-30 h-full w-full z-30' ref={sobreMi}>
                             <div className='relative inset-0 w-full pb-38 h-full'>
-                                <div className="flex flex-col text-start h-full lg:h-5/6 mx-1 mt-6 lg:mx-80 mt-1 lg:mt-20 justify-center">
+                                <div className="flex flex-col text-start h-full lg:h-5/6 mx-1 mt-6 2xl:mx-80 mt-1 lg:mt-20 justify-center">
                                     <div className='flex flex-col px-2 lg:flex-row gap-1 lg:gap-10 w-full h-8/9 justify-center items-center'>
-                                        <section className='py-1 lg:py-8 content-center justify-items-center h-[200px] lg:h-4/5'>
-                                            <motion.img src={perfil} alt="perfil" className='h-full w-full rounded-full size-100 p-5 mx-auto outline-5 bg-[var(--textLight)]/10 backdrop-blur-[4px] outline-[var(--bg)]'
+                                        <section className='py-1 sm:py-8 content-center justify-items-center h-[200px] sm:h-[400px] lg:h-4/5'>
+                                            <motion.img src={perfil} alt="perfil" className='h-full w-full rounded-full size-100 p-2 ms:p-5 mx-auto outline-5 bg-[var(--textLight)]/10 backdrop-blur-[4px] outline-[var(--bg)]'
                                                 variants={zoomIn}
                                                 initial="hidden"
                                                 animate="visible"
                                                 transition={{ duration: 1 }}
                                             />
                                         </section>
-                                        <section className='content-center w-full lg:w-2/4 h-full lg:h-4/5'>
-                                            <div className='bg-[var(--textLight)]/10 backdrop-blur-[4px] rounded-4xl px-5 py-5 lg:px-10 border-3 border-[var(--bg)] h-3/4 lg:h-full content-center'>
+                                        <section className='content-start w-full lg:w-2/4 h-3/4 lg:h-4/5 py-0'>
+                                            <div className='bg-[var(--textLight)]/10 backdrop-blur-[4px] rounded-4xl px-5 py-5 lg:px-10 border-3 border-[var(--bg)] h-3/4 lg:h-full content-center overflow-y-auto'>
                                                 <p className="text-sm lg:text-lg text-justify font-medium">
                                                     Egresado del programa de becas Boomerang.
                                                     Cuento con un amplio conocimiento en proyectos reales tanto en entornos académicos como institucionales.
@@ -392,7 +392,7 @@ function App() {
                                         </section>
                                     </div>
 
-                                    <section className='text-center'>
+                                    <section className='text-center pt-5 sm:pt-1'>
                                         <button
                                             onClick={() => window.open('/Alejandro_Socarras_HV_2025.pdf', '_blank')}
                                             className="cursor-pointer mt-0 lg:mt-5 text-md lg:text-xl text-[var(--textDark)] bg-[var(--textLight)] py-2 px-4 lg:py-5 lg:px-12 hover:bg-neutral-800 hover:text-[var(--textLight)] transition duration-300 ease-in-out rounded-full"
@@ -418,25 +418,23 @@ function App() {
 
                         <div className='relative flex flex-col justify-start h-full w-full z-10 overflow-hidden' ref={proyecto}>
                             <div className='relative inset-0 w-full h-full'>
-                                <div className="flex flex-col text-start h-full mx-1 lg:mx-80 justify-between">
-                                    <section className='relative content-center w-full h-1/15'>
+                                <div className="flex flex-col text-start h-full mx-1 lg:mx-30 2xl:mx-80 justify-between">
+                                    <section className='relative content-center w-full h-1/15 grow-0'>
                                         <motion.div
                                             className="absolute bottom-55 w-full h-full flex items-center justify-center"
                                             animate={controls}
                                             initial={{ rotate: 360 }}
                                         >
                                             {buttons.map((btn, i) => {
-                                                const angle = (i / buttons.length) * 360; // posición en círculo
-
+                                                const angle = (i / buttons.length) * 360;
                                                 return (
                                                     <div
                                                         key={i}
                                                         className="absolute"
                                                         style={{
-                                                            transform: `rotate(${angle}deg) translate(400px) rotate(-90deg)`, // solo posición en círculo
+                                                            transform: `rotate(${angle}deg) translate(400px) rotate(-90deg)`,
                                                         }}
                                                     >
-                                                        {/* Botón estático */}
                                                         <button
                                                             className="cursor-pointer group bg-[var(--textDark)] p-1 text-[var(--textLight)] hover:bg-[var(--textLight)] hover:text-[var(--textDark)] rounded-full transition duration-300 ease-in-out"
                                                             onMouseEnter={() => {
@@ -470,60 +468,8 @@ function App() {
                                         <h2 className='text-center text-4xl lg:text-6xl font-bold'>Proyectos</h2>
                                     </section>
 
-
-                                    <section className='relative content-center w-full h-4/7 mb-27 overflow-visible'>
-                                        <div className='relative overflow-x-hidden no-scrollbar w-full h-full mask-x-from-95% mask-x-to-100%'
-                                            ref={scrollRef}>
-                                            <div className="flex gap-4 min-w-full max-w-fit h-full px-5 py-10 overflow-x-visible no-scrollbar scroll-smooth"
-                                            >
-                                                {proyectos.map((p) => (
-                                                    <div
-                                                        key={p.id}
-                                                        className="group relative min-w-1/2 max-w-1/2 min-h-4/5 max-h-4/5 lg:min-w-2/7 lg:min-h-7/8 lg:max-w-2/7 lg:max-h-7/8 flex flex-col justify-center bg-[var(--textLight)]/10 self-end backdrop-blur-3xl rounded-4xl border-3 border-[var(--textDark)] overflow-hidden transition-all duration-300 ease-in-out active:scale-105 hover:scale-105"
-                                                    >
-                                                        {/* Contenedor que sube al hover */}
-                                                        <div className="flex flex-col h-full justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-10 group-active:-translate-y-10">
-
-                                                            {/* Imagen con mask animado */}
-                                                            <div className="w-full h-1/2 overflow-hidden">
-                                                                <img
-                                                                    src={p.imagen}
-                                                                    alt={p.nombre}
-                                                                    className="object-cover w-full h-full transition-all duration-300 ease-in-out group-hover:mask-b-from-70% group-hover:mask-b-to-90% group-active:mask-b-from-70% group-active:mask-b-to-90%"
-                                                                />
-                                                            </div>
-
-                                                            {/* Nombre */}
-                                                            <div>
-                                                                <h3
-                                                                    className="font-bold py-1 text-center text-md lg:text-xl bg-[var(--textDark)]/70 mask-y-from-80% mask-y-to-90% transition-all duration-300 ease-in-out"
-                                                                >
-                                                                    {p.nombre}
-                                                                </h3>
-                                                            </div>
-
-                                                            {/* Tecnologías */}
-                                                            <div className="flex gap-5 mt-2 justify-center">
-                                                                {p.tecnologias.map((x, i) => (
-                                                                    <div key={i}>
-                                                                        <TechIcon tech={x} size={35} />
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                            <div className="hidden flex gap-5 mt-2 justify-center transition-all duration-300 ease-in-out group-hover:flex group-active:flex">
-                                                                {p.link.map((x, i) => (
-                                                                    <a key={i} href={stringHaveGithub(x)} className={boolHaveGithub(x)}>
-                                                                        <TechIcon tech={stringHaveGithub(x)} size={35} />
-                                                                    </a>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        <div className='absolute z-40 right-55 lg:right-324 top-12 lg:top-1/2 -translate-y-1/2 rounded-full'>
+                                    <div className='w-full flex grow-3 justify-center lg:justify-between 2xl:justify-center gap-20 items-end py-2 lg:px-10'>
+                                        <div className='z-40 rounded-full size-fit'>
                                             <GlassSurface
                                                 className='w-full! h-full! p-2'
                                                 borderRadius={60}
@@ -542,7 +488,7 @@ function App() {
                                             </GlassSurface>
                                         </div>
 
-                                        <div className='absolute z-40 left-55 lg:left-324 top-12 lg:top-1/2 -translate-y-1/2 rounded-full'>
+                                        <div className='z-40 rounded-full size-fit'>
                                             <GlassSurface
                                                 className='w-full! h-full! p-2'
                                                 borderRadius={60}
@@ -559,6 +505,54 @@ function App() {
                                                     <MdNavigateNext size={35} />
                                                 </button>
                                             </GlassSurface>
+                                        </div>
+                                    </div>
+
+
+                                    <section className='relative content-center w-full h-1/3 2xl:h-4/8 mb-27 overflow-visible grow-0'>
+                                        <div className='relative overflow-x-hidden no-scrollbar w-full h-full mask-x-from-95% mask-x-to-100%'
+                                            ref={scrollRef}>
+                                            <div className="flex gap-4 min-w-full max-w-fit h-full px-5 py-1 2xl:py-10 overflow-x-visible no-scrollbar scroll-smooth"
+                                            >
+                                                {proyectos.map((p) => (
+                                                    <div
+                                                        key={p.id}
+                                                        className="group relative min-w-1/2 max-w-1/2 min-h-full max-h-full lg:min-w-2/7 lg:max-w-2/7 flex flex-col justify-center bg-[var(--textLight)]/10 self-end backdrop-blur-3xl rounded-4xl border-3 border-[var(--textDark)] overflow-hidden transition-all duration-300 ease-in-out active:scale-105 hover:scale-105"
+                                                    >
+                                                        <div className="flex flex-col h-full justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-10 group-active:-translate-y-10">
+
+                                                            <div className="w-full h-1/2 overflow-hidden">
+                                                                <img
+                                                                    src={p.imagen}
+                                                                    alt={p.nombre}
+                                                                    className="object-cover w-full h-full transition-all duration-300 ease-in-out group-hover:mask-b-from-70% group-hover:mask-b-to-90% group-active:mask-b-from-70% group-active:mask-b-to-90%"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <h3
+                                                                    className="font-bold py-1 text-center text-md lg:text-xl bg-[var(--textDark)]/70 mask-y-from-80% mask-y-to-90% transition-all duration-300 ease-in-out"
+                                                                >
+                                                                    {p.nombre}
+                                                                </h3>
+                                                            </div>
+                                                            <div className="flex gap-5 mt-2 justify-center">
+                                                                {p.tecnologias.map((x, i) => (
+                                                                    <div key={i}>
+                                                                        <TechIcon tech={x} size={35} />
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                            <div className="hidden flex gap-5 mt-2 justify-center transition-all duration-300 ease-in-out group-hover:flex group-active:flex">
+                                                                {p.link.map((x, i) => (
+                                                                    <a key={i} href={stringHaveGithub(x)} className={boolHaveGithub(x)}>
+                                                                        <TechIcon tech={stringHaveGithub(x)} size={35} />
+                                                                    </a>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
 
 
@@ -602,12 +596,12 @@ function App() {
 
                         <div className='pb-10 h-full w-full' ref={perfilP}>
                             <div className='relative z-10 inset-0 w-full flex flex-col gap-10'>
-                                <div className="flex flex-col lg:flex-row text-start h-[75vh] mx-1 mt-20 lg:mx-60 gap-2 lg:gap-10 shrink justify-center">
-                                    <section className='col-span-4 py-4 content-center bg-[var(--textLight)]/10 backdrop-blur-[4px] rounded-4xl px-10 border-3 border-[var(--bg)] w-full h-4/5 lg:w-1/2'>
+                                <div className="flex flex-col lg:flex-row text-start h-[75vh] mx-1 mt-10 lg:mt-20 2xl:mx-60 gap-2 lg:gap-10 shrink justify-center">
+                                    <section className='col-span-4 py-0 content-center bg-[var(--textLight)]/10 backdrop-blur-[4px] rounded-4xl px-2 lg:px-10 border-3 border-[var(--bg)] w-full h-4/8 lg:h-full lg:w-1/2'>
                                         <div className='border-b-5 w-3/4 pb-1'>
                                             <h2 className='text-xl lg:text-3xl font-bold'>EXPERIENCIA LABORAL</h2>
                                         </div>
-                                        <div className='mt-2 pb-4'>
+                                        <div className='mt-2 pb-4 overflow-y-auto h-1/2'>
                                             <div className='flex gap-10'>
                                                 <label className="text-md lg:text-xl text-start font-bold">Alcaldía Mayor de Cartagena</label>
                                                 <label className="text-sm lg:text-lg text-end font-normal">JUN 2024 - DIC 2024</label>
@@ -624,11 +618,11 @@ function App() {
                                         <div className='w-3/4 border-b-5 justify-self-end'></div>
                                     </section>
 
-                                    <section className='col-span-4 py-4 content-center bg-[var(--textLight)]/10 backdrop-blur-[4px] rounded-4xl px-10 border-3 border-[var(--bg)] w-full h-4/5 lg:w-1/2'>
+                                    <section className='col-span-4 py-0 content-center bg-[var(--textLight)]/10 backdrop-blur-[4px] rounded-4xl px-2 lg:px-10 border-3 border-[var(--bg)] w-full h-4/8 lg:h-full lg:w-1/2'>
                                         <div className='border-b-5 w-3/4 pb-1'>
                                             <h2 className='text-xl lg:text-3xl font-bold'>EDUCACIÓN</h2>
                                         </div>
-                                        <div className='mt-2'>
+                                        <div className='mt-2 overflow-y-auto h-1/2'>
                                             <div>
                                                 <div>
                                                     <label className="text-md lg:text-xl text-start font-bold">Tecnólogo en Desarrollo de Software</label>
@@ -668,9 +662,9 @@ function App() {
                                     </section>
                                 </div>
 
-                                <div className='h-2/12 mx-10 mt-10 lg:mx-80 relative'>
+                                <div className='h-2/12 mx-10 mt-10 2xl:mx-80 relative'>
                                     <GlassSurface
-                                        className='w-full! h-full! pt-30 pb-10'
+                                        className='w-full! h-full! pb-5 pt-30 2xl:pb-10 sm:pt-40'
                                         borderRadius={60}
                                         displace={2}
                                         distortionScale={-150}
@@ -681,7 +675,7 @@ function App() {
                                         opacity={0.8}
                                         mixBlendMode="screen"
                                     >
-                                        <label className='font-black text-5xl lg:text-7xl!'>
+                                        <label className='font-black text-4xl 2xl:text-7xl!'>
                                             Contacto
                                         </label>
                                     </GlassSurface>
@@ -689,9 +683,9 @@ function App() {
                             </div>
                         </div>
 
-                        <div className='pb-10 h-full w-full flex justify-center px-10 lg:px-0' ref={contacto}>
+                        <div className='pb-10 h-full w-full flex justify-center px-10 lg:px-0 mt-10 sm:mt-0 lg:mt-40 2xl:mt-10' ref={contacto}>
                             <div className='relative z-10 inset-0 w-full lg:w-3/8 flex flex-col gap-10 h-3/4 bg-[var(--textLight)]/10 self-end mb-5 backdrop-blur-[4px] rounded-4xl border-3 border-[var(--bg)] justify-center'>
-                                <ol className='flex flex-col gap-10 list-none text-md lg:text-2xl border-y-5 py-20'>
+                                <ol className='flex flex-col gap-3 2xl:gap-10 list-none text-md lg:text-2xl border-y-5 py-10 2xl:py-20 lg:px-10'>
                                     <li>
                                         <div className='flex gap-5 justify-center'>
                                             <div>
@@ -732,8 +726,8 @@ function App() {
                             </div>
                         </div>
 
-                        <div className='sticky z-40 bottom-5 lg:bottom-15 flex justify-center w-full h-1/13 lg:h-1/20'>
-                            <motion.div className='relative w-1/6 lg:w-1/24 h-full cursor-pointer'
+                        <div className='sticky z-40 bottom-5 lg:bottom-15 flex justify-center w-full h-fit'>
+                            <motion.div className='relative w-fit h-fit cursor-pointer '
                                 onClick={scrollToInicio}
                                 variants={fadeUp}
                                 initial="hidden"
@@ -743,7 +737,7 @@ function App() {
 
                             >
                                 <GlassSurface
-                                    className='w-full! h-full! m-0! lg:p-10!'
+                                    className='w-full! h-full! m-0! p-2'
                                     borderRadius={60}
                                     displace={2}
                                     distortionScale={-150}
